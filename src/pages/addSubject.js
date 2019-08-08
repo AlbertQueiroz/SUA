@@ -10,10 +10,6 @@ import {
 } from 'react-native';
 
 
-
-
-
-
 const addSubject = ({navigation}) => (
 
    

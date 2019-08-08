@@ -69,20 +69,18 @@ const Notes = ( {navigation}) => {
                 </View>
             
             </ScrollView>
-
-                <View style={{position: 'absolute', zIndex: 1, end: 1, top: '80%'
-                            }}>
-
-                    <TouchableOpacity onPress={() => navigation.navigate('AddNoteScreen', {notes: this.state.notes,})}>
-
-                        <Image source={require('../icons/Add.png')} style={{
-                            resizeMode: 'center', width: 60, height: 60,
-                        }} />
-
-                    </TouchableOpacity>
-
-                </View>
             
+        </View>
+        <View style={{ flex: 1, flexDirection:'row-reverse', margin: 20 }}>
+
+            <TouchableOpacity onPress={() => navigation.navigate('AddNoteScreen', {notes: this.state.notes,})}>
+
+                <Image source={require('../icons/Add.png')} style={{
+                    resizeMode: 'center', width: 60, height: 60,
+                }} />
+
+            </TouchableOpacity>
+
         </View>
     </View>
 )

@@ -13,25 +13,6 @@ import getRealm from '../../services/realm';
 import NotesSchema from '../schemas/notesSchema';
 
 
-// state = {
-//     noteToUpdate: {id:0, title: '', date:'', content: ''},
-
-// }
-
-// updateTitle = (value) => {
-//     this.state.noteToUpdate.title = value;
-
-// }
-
-// updateDate = (value) => {
-//     this.state.noteToUpdate.date = value;
-
-// }
-
-// updateContent = (value) => {
-//     this.state.noteToUpdate.content = value;
-// }
-
 
 const EditNotes = ( {navigation} ) => {
 

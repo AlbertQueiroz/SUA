@@ -43,8 +43,7 @@ const Schedule = ( {navigation}) => (
             <TouchableOpacity>
 
                 <Image source={require('../icons/Add.png')} style={{
-                    resizeMode: 'center', width: 60, height: 60,
-                }} />
+                    resizeMode: 'center', width: 60, height: 60}} />
 
             </TouchableOpacity>
 

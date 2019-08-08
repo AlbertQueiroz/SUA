@@ -12,20 +12,13 @@ const Mainmenu = ({ navigation }) => (
 
     <View style={ styles.headerApp }>
       
-      <TouchableOpacity onPress={()=> (alert('Lampada!'))} activeOpacity={0.5} >
-        <Image source={require('../icons/Lamp.png')} style={ styles.headerButtons }/>   
-      </TouchableOpacity>
-
       <Image source={require('../icons/Logo.png')} style={styles.headerLogo} resizeMode={'center'}/>
 
-      <TouchableOpacity onPress={()=> (alert('Usuário!'))} activeOpacity={0.5} >
-        <Image source={require('../icons/Usuario.png')} style={ styles.headerButtons }/>    
-      </TouchableOpacity>
 
     </View>
 
 
-    <View style={{ flex: 2, alignItems: 'center' }}>
+    <View style={{ flex: 3, alignItems: 'center' }}>
       
       <TouchableOpacity onPress={() => navigation.navigate('ScheduleScreen')} activeOpacity={0.5} >
         <Image source={require('../icons/Horario.png')} style={ styles.menuButtons } />
@@ -52,7 +45,6 @@ const Mainmenu = ({ navigation }) => (
       </TouchableOpacity>
 
     </View>
-    <View style={{flex: 1}}/>
   </View>
 
 
@@ -71,13 +63,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#55b15e',
   },
 
-  headerApp: {
-    flexDirection: 'row', 
+  headerApp: { 
     flex: 1, 
-    justifyContent: 'space-between', 
-    paddingTop: 10, 
-    paddingLeft: 20,
-    paddingRight: 20,
+    alignItems: 'center'
   },
 
   menuApp: {
@@ -94,9 +82,8 @@ const styles = StyleSheet.create({
   },
 
   headerLogo: {
-    width: 80, 
-    height: 80, 
     resizeMode: 'center',
+    opacity: 0.75
   },
 
   });
