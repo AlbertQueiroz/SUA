@@ -62,9 +62,9 @@ const NoteList = ( props ) => {
                 content: item.content,
             })} style={{flex: 1}}>
                 <View>
-                    <Text style={{ fontSize: 20, color: 'black', alignSelf: 'center', fontWeight: 'bold' }}>{item.title}</Text>
-                    <Text style={{ fontSize: 15, color: 'black', marginLeft: 10 }}>{item.date}</Text>
-                    <Text style={{ fontSize: 15, color: 'black', marginLeft: 10 }}>{item.content}</Text>
+                    <Text style={{ fontSize: 20, color: '#55b15e', alignSelf: 'center', fontWeight: 'bold' }}>{item.title}</Text>
+                    <Text style={{ fontSize: 15, fontWeight:'bold', color: '#808080', marginLeft: 10 }}>{item.date}</Text>
+                    <Text style={{ fontSize: 15, color: '#808080', marginLeft: 10 }}>{item.content}</Text>
                 </View>
             </TouchableOpacity>
         </View>} numColumns={1}

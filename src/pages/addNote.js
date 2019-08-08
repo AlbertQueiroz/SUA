@@ -130,7 +130,7 @@ const AddNote = ( {navigation}) =>{
         }}>
             <KeyboardAvoidingView style={{height:'30%', width:'80%'}} behavior={'padding'}>
             <View style={{flex: 1}}>
-                <Text style={{ fontSize: 20, color: 'black', width: '80%', height: '25%'}}>Título</Text>
+                <Text style={{ fontSize: 20, color: 'white', width: '80%', height: '25%'}}>Título</Text>
                 <View style={{ width: '100%', backgroundColor: 'white', height: '55%', borderRadius: 10}}>
 
                     <TextInput style={{ flex: 1, fontWeight: 'bold', fontSize: 15 }}
@@ -144,10 +144,10 @@ const AddNote = ( {navigation}) =>{
 
             <KeyboardAvoidingView style={{height:'30%', width:'80%',}} behavior={'height'}>
             <View style={{flex: 1}}>
-                <Text style={{ fontSize: 20, color: 'black', width: '80%', height: '25%'}}>Data</Text>
+                <Text style={{ fontSize: 20, color: 'white', width: '80%', height: '25%'}}>Data</Text>
                 <View style={{ width: '100%', backgroundColor: 'white', height: '55%', borderRadius: 10}}>
 
-                    <TextInput style={{ flex: 1,fontSize: 15 }}
+                    <TextInput keyboardType={'numeric'} style={{ flex: 1,fontSize: 15 }}
                     onChangeText={(date) => this.onchangeDate(date)}/>
 
                 </View>
@@ -156,9 +156,9 @@ const AddNote = ( {navigation}) =>{
 
             <KeyboardAvoidingView style={{height:'40%', width:'80%', }} behavior={'height'} >
             <View style={{flex: 1}}>
-                <Text style={{ fontSize: 20, color: 'black', width: '80%', height: '20%'}}>Conteúdo</Text>
+                <Text style={{fontSize: 20, color: 'white', width: '80%', height: '20%'}}>Conteúdo</Text>
                 <View style={{
-                    width: '100%', backgroundColor: 'white', height: '80%', borderRadius: 10,
+                    width: '100%', backgroundColor: 'white', height: '80%', borderRadius: 10
                 }}>
 
                     <TextInput style={{ flex: 1, fontSize: 15 }} multiline={true}
@@ -178,7 +178,7 @@ const AddNote = ( {navigation}) =>{
             <TouchableOpacity onPress={() => saveNote(toBeSaved)} style={{paddingTop: '3%', paddingBottom: '3%', paddingRight: '3%' }}>
 
                 <Image source={require('../icons/SaveIcon.png')} style={{
-                    resizeMode: 'center', width: 60, height: 60, borderRadius: 100,
+                    resizeMode: 'center', width: 45, height: 45, borderRadius: 100,
                 }} />
 
             </TouchableOpacity>
