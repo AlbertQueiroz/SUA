@@ -28,7 +28,7 @@ const Cardgrade = ( {navigation}) => (
             </TouchableOpacity>
         </View>
 
-        <View style={{flex: 5, backgroundColor:'white', padding:16, width:300, height: 300, marginLeft:50, borderRadius:10}}>
+        <View style={{flex: 5, backgroundColor:'white', padding:16, width:300, height: 300, alignSelf:'center', borderRadius:10}}>
             <Table borderStyle={{borderWidth: 4, borderColor: '#55b15e'}}>
                 <Row/>
             </Table>
@@ -44,7 +44,7 @@ const Cardgrade = ( {navigation}) => (
             <TouchableOpacity>
 
                 <Image source={require('../icons/Add.png')} style={{
-                    resizeMode: 'center', width: 60, height: 60,
+                    resizeMode: 'center', width: 75, height: 75,
                 }} />
 
             </TouchableOpacity>

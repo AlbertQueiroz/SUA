@@ -26,6 +26,7 @@ const EditNotes = ( {navigation} ) => {
                 realm.delete(dataToBeDeleted);
 
             })
+            navigation.goBack();
         }
 
     state = {
@@ -47,11 +48,12 @@ const EditNotes = ( {navigation} ) => {
             </TouchableOpacity>
                             <Image source={require('../icons/Notes.png')} style={{resizeMode: 'center', width: 30,
                              height: 30, flex: 2, marginLeft: 15}} />            
-            <TouchableOpacity style={{paddingRight: '3%'}}>
+            <TouchableOpacity style={{paddingRight: '3%'}}
+            onPress={() => deleteNotes(ID, navigation)}>
 
                 <Image source={require('../icons/DeleteIcon.png')} style={{resizeMode: 'center',
                 width: 40, height: 40, tintColor: 'white', marginLeft: 15, flex: 1}}
-                onPress={(ID, navigation) => deleteNotes(ID, navigation)} />
+                 />
 
             </TouchableOpacity>
         </View>

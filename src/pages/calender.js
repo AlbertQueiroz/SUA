@@ -76,7 +76,7 @@ const Calendario = ({navigation}) => (
     </View>
     <View style={{ flex: 1, flexDirection:'row-reverse', margin: 20 }}>
       <TouchableOpacity>
-        <Image source={require('../icons/Add.png')} style={{resizeMode: 'center', width: 60, height: 60,}} />
+        <Image source={require('../icons/Add.png')} style={{resizeMode: 'center', width: 75, height: 75,}} />
       </TouchableOpacity>
     </View>
   </View>

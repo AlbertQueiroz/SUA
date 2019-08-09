@@ -16,37 +16,32 @@ const Mainmenu = ({ navigation }) => (
 
 
     </View>
-
-
-    <View style={{ flex: 3, alignItems: 'center' }}>
-      
-      <TouchableOpacity onPress={() => navigation.navigate('ScheduleScreen')} activeOpacity={0.5} >
-        <Image source={require('../icons/Horario.png')} style={ styles.menuButtons } />
-      </TouchableOpacity>
-      
-      <TouchableOpacity onPress={() => navigation.navigate('SubjectsScreen')} activeOpacity={0.5} > 
-        <Image source={require('../icons/Disciplinas.png')} style={ styles.menuButtons } />
-      </TouchableOpacity>
-      
-      <TouchableOpacity onPress={() => navigation.navigate('CalenderScreen')} activeOpacity={0.5} >     
-        <Image source={require('../icons/Calendario.png')} style={ styles.menuButtons } />      
-      </TouchableOpacity>
-      
-      <TouchableOpacity onPress={() => navigation.navigate('NotesScreen')}  >
-        <Image source={require('../icons/Anotações.png')} style={styles.menuButtons} />
-      </TouchableOpacity>      
-      
-      <TouchableOpacity onPress={() => navigation.navigate('ActivitiesScreen')} activeOpacity={0.5} >  
-        <Image source={require('../icons/Atividades.png')} style={ styles.menuButtons } />
-      </TouchableOpacity>
-      
-      <TouchableOpacity onPress={() => navigation.navigate('CardgradeScreen')} activeOpacity={0.5} >  
-        <Image source={require('../icons/Boletim.png')} style={ styles.menuButtons } />
-      </TouchableOpacity>
-
-    </View>
+      <View style={{ flex: 3, alignItems: 'center'}}>
+        <TouchableOpacity onPress={() => navigation.navigate('ScheduleScreen')} activeOpacity={0.5} >
+          <Image source={require('../icons/Horario.png')} style={ styles.menuButtons } />
+        </TouchableOpacity>
+        
+        <TouchableOpacity onPress={() => navigation.navigate('SubjectsScreen')} activeOpacity={0.5} > 
+          <Image source={require('../icons/Disciplinas.png')} style={ styles.menuButtons } />
+        </TouchableOpacity>
+        
+        <TouchableOpacity onPress={() => navigation.navigate('CalenderScreen')} activeOpacity={0.5} >     
+          <Image source={require('../icons/Calendario.png')} style={ styles.menuButtons } />      
+        </TouchableOpacity>
+        
+        <TouchableOpacity onPress={() => navigation.navigate('NotesScreen')}  >
+          <Image source={require('../icons/Anotações.png')} style={styles.menuButtons} />
+        </TouchableOpacity>      
+        
+        <TouchableOpacity onPress={() => navigation.navigate('ActivitiesScreen')} activeOpacity={0.5} >  
+          <Image source={require('../icons/Atividades.png')} style={ styles.menuButtons } />
+        </TouchableOpacity>
+        
+        <TouchableOpacity onPress={() => navigation.navigate('CardgradeScreen')} activeOpacity={0.5} >  
+          <Image source={require('../icons/Boletim.png')} style={ styles.menuButtons } />
+        </TouchableOpacity>
+      </View>
   </View>
-
 
 )
 
@@ -54,8 +49,8 @@ const styles = StyleSheet.create({
   
   menuButtons: {
     resizeMode: 'center',
-    width: 170,
-    height: 50,
+    width: 150,
+    height: 50
   },
 
   backgroundApp: {

@@ -72,7 +72,7 @@ onchangeContent = (content) => {
 
 
 const AddNote = ( {navigation}) =>{
-    async function saveNote(note) { //uso do await necessário para o uso
+    async function saveNote(note, navigation) { //uso do await necessário para o uso
 
         const data = {
             id: this.state.notes.length,
@@ -87,6 +87,7 @@ const AddNote = ( {navigation}) =>{
         realm.write(() => {
             realm.create('NotesSchema', data);
         });
+        navigation.goBack();
     
     }
 
@@ -175,7 +176,7 @@ const AddNote = ( {navigation}) =>{
 
         <View style={{flex: 1, flexDirection: 'row-reverse', width: '100%'}}>
 
-            <TouchableOpacity onPress={() => saveNote(toBeSaved)} style={{paddingTop: '3%', paddingBottom: '3%', paddingRight: '3%' }}>
+            <TouchableOpacity onPress={() => saveNote(toBeSaved, navigation)} style={{paddingTop: '3%', paddingBottom: '3%', paddingRight: '3%' }}>
 
                 <Image source={require('../icons/SaveIcon.png')} style={{
                     resizeMode: 'center', width: 45, height: 45, borderRadius: 100,

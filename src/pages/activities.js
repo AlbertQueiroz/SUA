@@ -45,7 +45,7 @@ const Activities = ( {navigation}) => (
             <TouchableOpacity  onPress={() => navigation.navigate('AddActivitieScreen')} activeOpacity={0.5} >
 
                 <Image source={require('../icons/Add.png')} style={{
-                    resizeMode: 'center', width: 60, height: 60,
+                    resizeMode: 'center', width: 75, height: 75,
                 }} />
 
             </TouchableOpacity>
