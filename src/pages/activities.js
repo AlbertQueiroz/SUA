@@ -4,45 +4,54 @@ import {
   View,
   TouchableOpacity,
   Image,
-  CheckBox
+  Text,
+  ScrollView,
+  Dimensions,
+  Modal
 } from 'react-native';
 
 
+import ActivitieList from './activitieList';
 
-const Activities = ( {navigation}) => (
+
+const scrollEnabled = true
+
+const Activities = ( {navigation}) => { 
+
+    
+    return (
     <View style={ styles.backgroundApp }>
         <View style={styles.headerStyle}>
-
-            
-
             <TouchableOpacity onPress={() => navigation.goBack()}>
 
                 <Image source={require('../icons/Flecha.png')} style={styles.returnButton}/>
 
             </TouchableOpacity>
-							<Image source={require('../icons/icones/Activities.png')} style={{resizeMode: 'center', width: 30, height: 30, flex: 2, marginLeft: 40}} />            
-            <TouchableOpacity>
-
-                <Image source={require('../icons/Opções.png')} style={{resizeMode: 'center',
-                width: 70, height: 70, tintColor: 'white', paddingLeft: 30, marginBottom: 10, marginLeft: 20, flex: 1}} />
-
-            </TouchableOpacity>
-            
-
+            <Image source={require('../icons/icones/Activities.png')} style={{resizeMode: 'center', width: 30,
+            height: 30, flex: 1, alignSelf: 'center', marginRight: '10%'}} />
 
         </View>
+        <View style={{flex: 5, paddingBottom: 20}}>
+            <ScrollView 
+            scrollEnabled={this.scrollEnabled}
+            contentContainerStyle={{justifyContent: 'space-between'}} 
+            >
+                 <View style={{
+                    flex: 5, alignItems: 'center',
+                    flexDirection: 'column', justifyContent: 'space-between', width: '100%'
+                }}>
 
+                    <ActivitieList activitie={this.state.activities} navigation={navigation}/>
 
+                </View>
             
-                
-        
-        <View style={{flex: 5}}>
-
+            </ScrollView>
+            
         </View>
+        <View style={{position: 'absolute', zIndex: 1, end: 1, top: '80%'
+                            }}>
 
-        <View style={{ flex: 1, flexDirection:'row-reverse', margin: 20 }}>
-
-            <TouchableOpacity  onPress={() => navigation.navigate('AddActivitieScreen')} activeOpacity={0.5} >
+            <TouchableOpacity onPress={() => navigation.navigate('AddActivitieScreen', {activities: this.state.activities,})}>
 
                 <Image source={require('../icons/Add.png')} style={{
                     resizeMode: 'center', width: 75, height: 75,
@@ -54,19 +63,18 @@ const Activities = ( {navigation}) => (
 
     </View>
 )
-
+}
 
 const styles = StyleSheet.create({
 
     returnButton: {
-    resizeMode: 'center',
-    width: 30, 
-    height: 25, 
-    marginTop: 20, 
-    marginLeft: 15, 
-    tintColor: 'white',
-		marginBottom: 30,
-		flex: 1
+			resizeMode: 'center',
+			width: 30, 
+			height: 25, 
+			marginTop: 20, 
+			marginLeft: 15, 
+			tintColor: 'white',
+			marginBottom: 30,
     },
 
     backgroundApp: {
@@ -78,9 +86,14 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         flex: 1,
         justifyContent: 'space-between',
-        alignItems: 'center'
+        alignItems: 'center',
+        height: '20%'
     }
 
 })
+
+
+
+
 
 export default Activities;

@@ -10,45 +10,59 @@ import {
 import getRealm from '../../services/realm';
 
 state = {
-    notes: []
+    activities: []
 }
 
 
 
 
 
-const NoteList = ( props ) => {
+const ActivitieList = ( props ) => {
     
+    
+    // useEffect(() => {
+    //     async function loadActivities() {
+    //         const realm = await getRealm();
+    
+    //         const data = realm.objects('ActivitiesSchema');
+    
+    //         this.state.activities = data;
+            
+    //         alert(data.title);
+    //     }
+        
+    //     loadActivities();
+    
+    
+    // }, []);
 
-
-        async function loadNotes() {
+        async function loadActivities() {
             const realm = await getRealm();
     
-            const data = realm.objects('NotesSchema');
+            const data = realm.objects('ActivitiesSchema');
     
-            this.state.notes = data;
+            this.state.activities = data;
             
         }
         
-        loadNotes();
+        loadActivities();
 
 
 
     return (
         <View style={{flex: 1}}>
         <FlatList
-        data={this.state.notes}
+        data={this.state.activities}
         renderItem={({item}) => 
-            <View style={styles.noteStyle}>
-            <TouchableOpacity onPress={() => props.navigation.navigate('EditNoteScreen', {
+            <View style={styles.activitieStyle}>
+            <TouchableOpacity onPress={() => props.navigation.navigate('EditActivitieScreen', {
                 id: item.id,
                 title: item.title,
-                date: item.date,
                 content: item.content,
             })} style={{flex: 1}}>
                 <View>
                     <Text style={{ fontSize: 20, color: '#55b15e', alignSelf: 'center', fontWeight: 'bold' }}>{item.title}</Text>
-                    <Text style={{ fontSize: 15, fontWeight:'bold', color: '#808080', marginLeft: 10 }}>{item.date}</Text>
+                    <Text style={{ fontSize: 15, fontWeight:'bold', color: '#808080', marginLeft: 10 }}>{(item.date)}</Text>
                     <Text style={{ fontSize: 15, color: '#808080', marginLeft: 10 }}>{item.content}</Text>
                 </View>
             </TouchableOpacity>
@@ -58,11 +72,11 @@ const NoteList = ( props ) => {
         )}
 
 const styles = StyleSheet.create({
-    noteStyle: {
+    activitieStyle: {
         width: 300, height: 140, backgroundColor: 'white', marginTop: 20, borderRadius: 10
     }
 
 })
 
 
-export default NoteList;
+export default ActivitieList;

@@ -11,6 +11,10 @@ import EditNotes from './pages/editNote';
 import AddNote from './pages/addNote';
 import AddSubject from './pages/addSubject';
 import AddActivitie from './pages/addActivitie';
+import AddDay from './pages/addDay';
+import EditActivities from './pages/editActivitie';
+import EditSubjects from './pages/editSubject';
+
 
 const Routes = createAppContainer(
   createStackNavigator({
@@ -18,6 +22,12 @@ const Routes = createAppContainer(
       screen: Mainmenu,
       navigationOptions: {
         header: null,
+      }
+    },
+    AddDayScreen: {
+      screen: AddDay,
+      navigationOptions: {
+        header: null
       }
     },
     NotesScreen: {
@@ -69,6 +79,12 @@ const Routes = createAppContainer(
         header: null
       }
     },
+    AddActivitieScreen: {
+      screen: AddActivitie,
+      navigationOptions: {
+        header: null
+      }
+    },
     AddSubjectScreen: {
       screen: AddSubject,
       navigationOptions: {
@@ -80,7 +96,19 @@ const Routes = createAppContainer(
       navigationOptions: {
         header: null
       }
-    }
+    },
+    EditActivitieScreen: {
+      screen: EditActivities,
+      navigationOptions: {
+        header: null
+      }
+    },
+    EditSubjectScreen: {
+      screen: EditSubjects,
+      navigationOptions: {
+        header: null
+      }
+    },
 
   })
 )
